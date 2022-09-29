@@ -67,4 +67,6 @@ export interface Props {
     changeHero?: (hero: string) => void;
     hero?: string,
     currentHero?: string,
+    friend?: string,
+    number?:number,
 }
