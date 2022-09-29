@@ -1,22 +1,19 @@
 import './App.css';
-import Data from './components/Data';
-import Info from './components/Info';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Main from './components/Main';
+import { useState } from 'react';
+import { defaultHero } from './utils/constants';
 
-function App() {
+const App = () => {
+
+  const [hero, setHero] = useState(defaultHero);
+
   return (
-    <div className='wrapper'>
-      <div className='main'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-sm-5 info'>
-              <Info />
-            </div>
-            <div className='col-sm-7 form'>
-              <Data />
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="container-fluid">
+      <Header hero={hero}/>
+      <Main changeHero={setHero} hero={hero}/>
+      <Footer />
     </div>
   );
 }
