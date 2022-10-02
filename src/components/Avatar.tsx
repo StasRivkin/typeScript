@@ -1,14 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { changeAvatar, changeName } from '../reducers/userReducer';
 import { RootState } from '../store/configureStore';
-import { User } from '../types';
+import userReucer from '../reducers/userReducer'
 
 interface Props {
-    size: 'small'|undefined,
+    size?: 'small',
 }
 
 const Avatar = ({ size } : Props) => {
-    const user = useSelector<RootState, User>(state => state.user);
+    const user = useSelector<RootState, ReturnType<typeof userReucer>>(state => state.user);
     const dispatch = useDispatch();
 
     return (

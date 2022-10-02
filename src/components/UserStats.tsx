@@ -1,10 +1,11 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeStats } from '../reducers/statsReducer';
+import { RootState } from '../store/configureStore';
 import Avatar from './Avatar';
 
 const UserStats = () => {
-    const { user, stats } = useSelector(state => state);
+    const { user, stats } = useSelector<RootState, RootState>(state => state);
     const dispatch = useDispatch();
 
     return (
