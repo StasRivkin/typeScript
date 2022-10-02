@@ -7,7 +7,7 @@ import { defaultHero } from './utils/constants';
 
 const App = () => {
 
-  const [hero, setHero] = useState<string>(defaultHero);
+  const [hero, setHero] = useState(defaultHero);
 
   return (
     <div className="container-fluid">

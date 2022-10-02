@@ -3,7 +3,7 @@ import { navItems } from '../utils/constants';
 import { Props } from '../utils/types';
 import NavItem from './NavItem';
 
-const Navigation = ({hero}: Props) => {
+const Navigation = ({hero}: Props) => { 
   return (
     <nav className="fixed-top mt-2 ms-4">
       <ul className="nav">

@@ -51,22 +51,15 @@ export interface charactersType {
     },
 }
 
-export interface navItemsType {
-    item: {
-        title: string,
-        route: string,
-    },
-    hero?: string,  // не понял почему он должен здесь быть, при его отсутсвии дает ошибку в компоненте Navigation.tsx -
-                    // Type '{ key: string; item: { title: string; route: string; }; hero: string | undefined; }' 
-                    // is not assignable to type 'IntrinsicAttributes & navItemsType'.
-                    //   Property 'hero' does not exist on type 'IntrinsicAttributes & navItemsType'.ts(2322)
-    
-}
-
 export interface Props {
     changeHero?: (hero: string) => void;
     hero?: string,
     currentHero?: string,
+    heroId?: string,
     friend?: string,
     number?:number,
+    item?: {
+        title: string,
+        route: string,
+    },
 }

@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
-import { navItemsType, Props } from '../utils/types';
+import { Props } from '../utils/types';
 
-const NavItem = ( {item}: navItemsType, {hero} : Props) => {
+const NavItem = ( {item, hero} : Props) => {
+  console.log(hero);
+  
   return (
     <li>
-      <Link className="nav-item btn btn-danger mx-1" to={`${item.route}/${hero}`}> {item.title} </Link>
+      <Link className="nav-item btn btn-danger mx-1" to={`${item!.route}/${hero}`}> {item!.title} </Link>
     </li>
   )
 }

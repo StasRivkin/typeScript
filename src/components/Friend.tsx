@@ -4,10 +4,8 @@ import { characters } from '../utils/constants';
 import { Link } from 'react-router-dom';
 import { charactersType, Props } from '../utils/types';
 
-const Friend = ({friend}: Props, number : Props) => {   
-    
+const Friend = ({friend, number}: Props) => {   
     let friendStyle = 'w-100 ';
-
     if (number === 7) {
         friendStyle += style.bottomLeft;
     }

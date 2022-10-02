@@ -3,7 +3,7 @@ import { friends } from '../utils/constants';
 import { Props } from '../utils/types';
 import Friend from './Friend';
 
-const DreamTeam = ({hero}: Props) => {    
+const DreamTeam = ({hero}: Props) => {        
     return (
         <section className="float-end w-50 mx-1 row border">
             <h2 className="col-12 text-center">Dream Team</h2>
