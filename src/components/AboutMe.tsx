@@ -27,7 +27,7 @@ const AboutMe = ({ currentHero, changeHero }: Props) => {
   }
 
   useEffect(() => {
-    console.log(heroId);
+    changeHero!(heroId!);
     let hero = JSON.parse(localStorage.getItem(heroId!) as string);
     if (!hero || (Date.now() - hero.time) > periodMonth) {
       fetch(`${characters[heroId as keyof charactersType].url}`)
@@ -50,7 +50,7 @@ const AboutMe = ({ currentHero, changeHero }: Props) => {
           };
           localStorage.setItem(heroId!, JSON.stringify(hero));
         });
-        changeHero!(heroId!);
+        
 
       console.log('fetch');
     }
