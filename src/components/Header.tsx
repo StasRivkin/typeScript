@@ -4,8 +4,6 @@ import { charactersType, Props } from '../utils/types'
 import Navigation from './Navigation'
 
 const Header = ({hero} : Props) => {
-    console.log(hero);
-    
     return (
         <header>
             <Navigation hero={hero} />
