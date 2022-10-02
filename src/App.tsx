@@ -1,20 +1,17 @@
+import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
 import Main from './components/Main';
-import { useState } from 'react';
-import { defaultHero } from './utils/constants';
+import Nav from './components/Nav';
 
 const App = () => {
 
-  const [hero, setHero] = useState(defaultHero);  
   return (
-    <div className="container-fluid">
-      <Header hero={hero}/>
-      <Main changeHero={setHero} hero={hero}/>
-      <Footer />
+    <div className="app">
+      <Nav />
+      <Main />
     </div>
   );
+
 }
 
 export default App;
