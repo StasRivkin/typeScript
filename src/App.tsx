@@ -1,17 +1,16 @@
-import React from 'react';
+import React from 'react'
 import './App.css';
-import Main from './components/Main';
-import Nav from './components/Nav';
+import Balance from './components/Balance';
+import Operations from './components/Operations';
 
-const App = () => {
+function App() {
 
   return (
-    <div className="app">
-      <Nav />
-      <Main />
+    <div>
+      <Balance />
+      <Operations />
     </div>
   );
-
 }
 
 export default App;
