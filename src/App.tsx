@@ -1,24 +1,22 @@
-import './App.css';
-import Data from './components/Data';
-import Info from './components/Info';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import Game from './components/Game';
+import Result from './components/Result';
+import Start from './components/Start';
+import pageReducer from './reducers/pageReducer';
+import { RootState } from './store/configureStore';
 
-function App() {
-  return (
-    <div className='wrapper'>
-      <div className='main'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-sm-5 info'>
-              <Info />
-            </div>
-            <div className='col-sm-7 form'>
-              <Data />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+const App = () => {
+  const page = useSelector<RootState, ReturnType<typeof pageReducer> >(state => state.page);
+
+  switch (page) {
+    case 'game':
+      return <Game/>;
+    case 'result':
+      return <Result/>
+    default:
+      return <Start/>
+  }
 }
 
 export default App;
