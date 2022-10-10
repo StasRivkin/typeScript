@@ -1,5 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// interface Card {
+//     rank?: number,
+//     suit?: string,
+// }
+
 const defaultDeck = {
     fullDeck: [] as object[],
     userDeck: [] as object[],
@@ -29,7 +34,7 @@ const deckSlice = createSlice({
             deck.fullDeck.sort(() => Math.random() - 0.5);
             /////////////////////////////////////////// user and comp deck sorting/creating
             deck.userDeck = deck.fullDeck.slice(0, deck.fullDeck.length / 2);
-            //deck.userCard = deck.userDeck.pop(); //for the first step
+            deck.userCard = deck.userDeck.pop(); //for the first step
             deck.compDeck = deck.fullDeck.slice(26, deck.fullDeck.length);
             deck.compCard = deck.compDeck.pop(); //for the first step
         },
